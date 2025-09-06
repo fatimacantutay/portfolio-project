@@ -10,7 +10,7 @@
 }
 
 .main {
-    background: url(background.jpg)
+    background: url(background.jpg);
 }
 
 .header {
@@ -81,26 +81,6 @@
     margin: 20px 0 30px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 28px;
-    background: #05386B;
-    border: 2px solid #05386B;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    font-size: 16px;
-    color: #eaeaea;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .5s;
-}
-
-.btn:hover {
-    background: transparent;
-    color: #05386B
-}
-
 .home-img {
     position: relative;
     right: -7%;
@@ -128,6 +108,26 @@
     transform: rotate(-45deg);
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: #05386B;
+    border: 2px solid #05386B;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    color: #eaeaea;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #05386B
+}
+
 .about {
     width: 100%;
     padding: 100px 0px;
@@ -135,7 +135,8 @@
 
 .about img {
     height: auto;
-    width: 430px;
+    width: 100%;
+    max-width: 350px;
 }
 
 .text {
@@ -175,29 +176,14 @@
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 40px 0 20px;
 }
 
-.tab-links {
+.tab-link {
     margin-right: 50px;
     font-weight: 600;
     cursor: pointer;
     position: relative;
-}
-
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #05386B;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links.active-link::after{
-    width: 50%;
 }
 
 .tab-contents ul li{
@@ -211,20 +197,16 @@
     font-size: 18px;
 }
 
-.tab-contents {
-    display: none;
-}
-
 .tab-contents.active-tab{
     display: block;
 }
 
-.services {
+.skills {
     padding-top: 120px;
     margin: 50px;
 }
 
-.services-text {
+.skills-text {
     width: 100%;
     text-align: center;
     color: #eaeaea;
@@ -239,24 +221,24 @@
     margin-top: 1%;
 }
 
-.services-text h1 {
+.skills-text h1 {
     font-size: 40px;
     font-weight: 600;
     color: #222;
 }
 
-.services-text p {
+.skills-text p {
     margin-top: 10px;
 }
 
-.services-list {
+.skills-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 5px;
     margin-top: 50px;
 }
 
-.services-list div{
+.skills-list div{
     background: #262626;
     margin: 0 50px 0 50px;
     padding: 30px;
@@ -266,12 +248,12 @@
     transition: background 0.5s, transform 0.5s;
 }
 
-.services-list div i {
+.skills-list div i {
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.services-list div:hover{
+.skills-list div:hover{
     background: #05386B;
     transform: translateY(-10px);
 }
@@ -457,9 +439,9 @@
 }
 
 .footer-main {
-    background: #222;
+    font-size: 14px;
     text-align: center;
     padding: 3px;
-    line-height: 2;
-    color: white;
+    line-height: 1.5;
+    color: #222;
 }
