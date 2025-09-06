@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantutay Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/bd3b614d38.js" crossorigin="anonymous"></script>
 </head>
@@ -18,8 +18,8 @@
             <nav class="navbar">
                 <a href="#">Home</a>
                 <a href="#about">About </a>
-                <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
+                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
            </nav>
     </header>
@@ -60,67 +60,19 @@
                     for my passion, inspiring me to embark on a dynamic career in web development. </p>
 
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-link">Expertise</p>
             </div>
-            <div class="tab-contents active-tab" id="skills">
+            <div class="tab-contents active-tab">
                 <ul>
                     <li><span>HTML</span><br>Proficient in crafting well-structured and semantic markup.</li>
                     <li><span>CSS</span><br>Expert in styling and layout to create visually appealing and responsive designs that enhance user experience.</li>
                     <li><span>JavaScript</span><br>Strong command of JavaScript, implementing dynamic and interactive elements to elevate website functionality and user engagement.</li>
                 </ul>
             </div>
-            <div class="tab-contents" id="experience">
-                <ul>
-                    <li><span>2027-Present</span><br>Freelance Web Developer</li>
-                    <li><span>2026-2027</span><br>Security Analyst at Cybersecurity Solutions LLC</li>
-                    <li><span>2024-2026</span><br>Software Developer at Tech Innovations Inc.</li>
-                </ul>
-            </div>
-            <div class="tab-contents" id="education">
-                <ul>
-                    <li><span>2023-2027</span><br>Graduated with a Computer Science Degree at Caraga State University</li>
-                    <li><span>2021-2023</span><br>STEM Student <br>Graduated With High Honors at Libertad National High School</li>
-                    <li><span>2017-2021</span><br>Graduated With Honors at Libertad National High School</li>
-                </ul>
-            </div>
             </div>
         </div>
     </section>
     <!--About section ends here-->
-    
-    <!--Services section starts-->
-    <section id="services" class="services">
-        <div class="services-text">
-            <h1>Services</h1>
-            <p class="desc">From creating visually appealing and user-friendly websites to<br> implementing robust back-end functionalities.</p>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Bringing your ideas to life through captivating web design.
-                    Blending creativity with functionality to craft user-friendly
-                    and visually appealing websites. Let's make your digital vision a reality.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Expert in crafting seamless and delightful user experiences.
-                    From initial wireframes to polished interfaces, our UI/UX design
-                    service prioritizes user satisfaction at every step.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h2>Web Security</h2>
-                    <p>Expert in implementing robust security measures to safeguard against
-                    online threats. From vulnerability assessments to real-time monitoring,
-                    I ensure that your website or application remains resilient and secure.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Services section ends here-->
 
     <!--Portfolio section starts-->    
     <section id="portfolio" class="portfolio">
@@ -155,6 +107,38 @@
         </div>
     </section>
     <!--Portfolio section ends here-->
+    
+    <!--Skills section starts-->
+    <section id="skills" class="skills">
+        <div class="skills-text">
+            <h1>Skills</h1>
+            <p class="desc">From creating visually appealing and user-friendly websites to<br> implementing robust back-end functionalities.</p>
+            <div class="skills-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Bringing your ideas to life through captivating web design.
+                    Blending creativity with functionality to craft user-friendly
+                    and visually appealing websites. Let's make your digital vision a reality.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Expert in crafting seamless and delightful user experiences.
+                    From initial wireframes to polished interfaces, our UI/UX design
+                    service prioritizes user satisfaction at every step.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h2>Web Security</h2>
+                    <p>Expert in implementing robust security measures to safeguard against
+                    online threats. From vulnerability assessments to real-time monitoring,
+                    I ensure that your website or application remains resilient and secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Skills section ends here-->
 
     <!--Contact section starts-->
     <section id="contact" class="contact">
@@ -165,7 +149,7 @@
             I'm here and eager to connect. Your digital vision deserves attention, and I'm ready to 
             bring it to life. Reach out, and let's make things happen together!"</p>
             <div class="contact-list">
-                <li><i class="fa-solid fa-envelope"></i>fatimacantutay@gmail.com</li>
+                <li><i class="fa-solid fa-envelope"></i>fatimanicolecantutay@gmail.com</li>
                 <li><i class="fa-solid fa-phone"></i>09916038673</li>
             </div>
         </div>
@@ -181,24 +165,6 @@
             </div>
     </section>
     <!--Contact section ends here-->
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link")
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab")
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
 </body>
 
 <!--Footer-->
@@ -206,7 +172,7 @@
     <div class="footer-main">
         <hr>
         <h2>All Rights Reserved</h2>
-        <h3>Created by Fatima Nicole M. Cantutay</h3>
+        <h3>© Fatima Nicole M. Cantutay</h3>
     </div>
 </footer> 
 <!--Footer section and website ends here-->  
