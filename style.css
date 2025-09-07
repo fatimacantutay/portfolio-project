@@ -445,3 +445,81 @@
     line-height: 1.5;
     color: #222;
 }
+
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column; /* Stack home content and image */
+        padding: 50px 5%;
+    }
+    
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .home-img {
+        width: 100%;
+        height: 300px;
+        transform: rotate(0); /* Reset rotation for better view */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 80%; /* Make image smaller on mobile */
+    }
+
+    .portfolio-content h1 {
+        font-size: 30px;
+    }
+
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* More compact grid layout */
+    }
+
+    .contact {
+        grid-template-columns: 1fr; /* Stack the contact content vertically */
+    }
+}
+
+/* For devices with screen width 480px and below (mobile) */
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 36px; /* Smaller heading */
+    }
+
+    .home-content p {
+        font-size: 14px; /* Smaller text for better readability */
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .about-content img {
+        width: 90%; /* Further reduce image size */
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr; /* Stack skills in a single column */
+    }
+
+    .work-list {
+        grid-template-columns: 1fr; /* Stack work items in a single column */
+    }
+
+    .contact-list li {
+        font-size: 14px; /* Smaller text in contact list */
+    }
+
+    .contact-form form input,
+    .contact-form form textarea {
+        width: 100%; /* Full-width inputs */
+    }
+}
