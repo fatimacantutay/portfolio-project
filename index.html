@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/bd3b614d38.js" crossorigin="anonymous"></script>
 </head>
 
+<button class="dark-mode-toggle" id="darkToggle">🌙</button>
+
 <body>
     <main class="main">
     <!--Site Header with Navigation Bar--> 
@@ -54,15 +56,16 @@
             <div class="text">
                 <h1>About Me</h1>
                 <h3>Web Developer and Designer</h3>
-                <p>My journey as a web developer began with a Computer Science degree
+                <p id="about-text">My journey as a web developer began with a Computer Science degree
                     from Caraga State University, where I gained a solid foundation
                     in programming and design. My educational journey laid the groundwork
                     for my passion, inspiring me to embark on a dynamic career in web development. </p>
+                <button id="edit-about">Edit</button>
 
             <div class="tab-titles">
                 <p class="tab-link">Expertise</p>
             </div>
-            <div class="tab-contents active-tab">
+            <div class="tab-contents">
                 <ul>
                     <li><span>HTML</span><br>Proficient in crafting well-structured and semantic markup.</li>
                     <li><span>CSS</span><br>Expert in styling and layout to create visually appealing and responsive designs that enhance user experience.</li>
@@ -93,7 +96,7 @@
                     <img src="Restaurant Website.png">
                     <div class="layer">
                         <h5>Restaurant Website</h5>
-                        <a href="https://restaurant-website-kappa-indol.vercel.app/#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="webpage/FatimaCantutay.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -176,6 +179,51 @@
     </div>
 </footer> 
 <!--Footer section and website ends here-->  
+
+<script>
+    const toggleBtn = document.getElementById("darkToggle");
+    const body = document.body;
+
+    if (localStorage.getItem("darkMode") === "on") {
+        body.classList.add("dark");
+        toggleBtn.textContent = "☀️";
+    }
+
+    toggleBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        const darkModeOn = body.classList.contains("dark");
+
+        toggleBtn.textContent = darkModeOn ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", darkModeOn ? "on" : "off");
+    });
+</script>
+
+<script>
+    const editBtn = document.getElementById("edit-about");
+    const aboutText = document.getElementById("about-text");
+
+    let isEditing = false;
+
+    editBtn.addEventListener("click", () => {
+    if (!isEditing) {
+        aboutText.setAttribute("contenteditable", "true");
+        aboutText.focus();
+        editBtn.textContent = "Save";
+        isEditing = true;
+    } else {
+        aboutText.setAttribute("contenteditable", "false");
+        editBtn.textContent = "Edit";
+        isEditing = false;
+
+        localStorage.setItem("aboutText", aboutText.innerHTML);
+    }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("aboutText");
+    if (saved) aboutText.innerHTML = saved;
+    });
+</script>
 
 </html>
 
