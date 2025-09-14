@@ -610,6 +610,22 @@ body.dark .about .tab-contents ul li span {
     color: #ffdd64;  
 }
 
+body.dark #edit-about {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #ffdd64;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+body.dark #edit-about:hover {
+    background: transparent;
+    color: #e0e0e0;
+}
+
 body.dark a {
   color: #e0e0e0; 
 }
@@ -694,3 +710,4 @@ body.dark footer {
     background: #111;
     color: #e0e0e0;
 }
+
